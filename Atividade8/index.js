@@ -24,7 +24,7 @@ function recebeDados() {
 
   document.getElementById("pesquisa-opiniao").reset();
 
-  if (contador === 1) {
+  if (contador === 45) {
     retornaResultado();
   }
   incrementaContador();
