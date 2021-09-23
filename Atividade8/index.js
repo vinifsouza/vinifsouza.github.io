@@ -61,6 +61,6 @@ function retornaResultado() {
   ).toFixed(2)}%`;
 
   window.location.href(
-    `resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
+    `./resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
   );
 }
