@@ -60,7 +60,7 @@ function retornaResultado() {
     100
   ).toFixed(2)}%`;
 
-  window.location.replace(
-    `resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
+  window.location.href(
+    `/resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
   );
 }
