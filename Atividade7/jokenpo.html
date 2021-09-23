@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=   device-width, initial-scale=1.0">
+    <title>Jokenpô</title>
+
+    <script>
+        function geraNumeroInteiroAleatorio(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max) + 1;
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function validaValor(valorUsuario) {
+            try {
+                const escolhaParser = parseInt(valorUsuario);
+
+                if (![1, 2, 3].includes(escolhaParser)) {
+                    return false;
+                }
+
+            } catch {
+                return false;
+            }
+
+            return true;
+        }
+
+        function solicitaValor() {
+            let texto = 'Escolha uma das opções';
+            texto += '\n1 - Pedra';
+            texto += '\n2 - Papel';
+            texto += '\n3 - Tesoura';
+            return prompt(texto);
+        }
+
+        const possibilidades = {
+            1: {
+                nome: 'Pedra',
+                ganha: 'Tesoura'
+            },
+            2: {
+                nome: 'Papel',
+                ganha: 'Pedra'
+            },
+            3: {
+                nome: 'Tesoura',
+                ganha: 'Papel'
+            }
+        }
+
+        const valorUsuario = solicitaValor();
+
+        if (!valorUsuario || !validaValor(valorUsuario)) {
+            alert('Digite um valor válido!');
+            solicitaValor();
+        }
+
+        const computador = geraNumeroInteiroAleatorio(1, 3);
+
+        if (valorUsuario == computador) {
+            alert("Empate!");
+        }
+
+        if (possibilidades[valorUsuario].ganha == possibilidades[computador].nome) {
+            let resultado = 'Usuário ganhou!!';
+            resultado += `\nUsuário: ${possibilidades[valorUsuario].nome}`
+            resultado += ` | Computador ${possibilidades[computador].nome}`
+            alert(resultado);
+        } else {
+            let resultado = 'Computador ganhou!!';
+            resultado += `\nUsuário: ${possibilidades[valorUsuario].nome}`
+            resultado += ` | Computador: ${possibilidades[computador].nome}`
+            alert(resultado);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
