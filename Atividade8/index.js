@@ -24,7 +24,7 @@ function recebeDados() {
 
   document.getElementById("pesquisa-opiniao").reset();
 
-  if (contador === 3) {
+  if (contador === 1) {
     retornaResultado();
   }
   incrementaContador();
@@ -61,6 +61,6 @@ function retornaResultado() {
   ).toFixed(2)}%`;
 
   window.location.replace(
-    `/resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
+    `../resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
   );
 }
