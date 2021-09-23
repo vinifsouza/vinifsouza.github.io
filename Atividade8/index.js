@@ -47,7 +47,7 @@ function retornaResultado() {
     quantidadeMulheres++;
   }
 
-  for (resposta of opinioes) {
+  for (let resposta of opinioes) {
     if (resposta === "pessimo") {
       quatidadePessimos++;
     } else if (["otimo", "bom"].includes(resposta)) {
@@ -61,6 +61,6 @@ function retornaResultado() {
   ).toFixed(2)}%`;
 
   window.location.replace(
-    `../resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
+    `resultado.html?idadeMinima=${idadeMinima}&idadeMaxima=${idadeMaxima}&mediaIdade=${mediaIdade}&pessimos=${quatidadePessimos}&otimoBom=${porcentagemOtimoBom}`
   );
 }
