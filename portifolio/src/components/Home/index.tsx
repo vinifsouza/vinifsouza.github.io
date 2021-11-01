@@ -1,24 +1,27 @@
-import { ColLeft, ColRight, Container, Name, Salute } from './styled';
+import * as S from './styled';
 
+import AstronautAnimation from './AstronautAnimation/index';
+import { Footer } from './../../shared/Footer';
 import React from 'react';
-import { ScrollToIcon } from './../../shared/ScrollToIcon/index';
 
 export default function Home() {
   return (
-    <Container id="home">
-      <ColLeft>
-        <Salute>
-          <div>Olá, eu sou</div>
-          <Name>Vinícius Souza</Name>
-          desenvoledor back-end
-        </Salute>
-      </ColLeft>
+    <S.Main>
+      <S.Container id="home">
+        <S.ColLeft>
+          <S.Salute>
+            <span>Olá, eu sou</span>
+            <S.Name>Vinícius Souza</S.Name>
+            <span>desenvoledor back-end</span>
+          </S.Salute>
+        </S.ColLeft>
 
-      <ColRight>
-        <img src="/assets/images/profile-photo.png" alt="My avatar" />
-      </ColRight>
+        <S.ColRight>
+          <AstronautAnimation />
+        </S.ColRight>
+      </S.Container>
 
-      <ScrollToIcon target="about-me" />
-    </Container>
+      <Footer target="about-me" />
+    </S.Main>
   );
 }
