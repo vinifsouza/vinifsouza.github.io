@@ -8,5 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Fira Code', monospace;
     max-width: 100%;
     caret-color: transparent;
+
   }
 `;
